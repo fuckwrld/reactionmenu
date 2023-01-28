@@ -317,7 +317,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Back"
 		- custom_id: :attr:`ViewButton.ID_PREVIOUS_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blue, emoji="<:left:1060419618096807977>", custom_id=cls.ID_PREVIOUS_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji="<:left:1060419618096807977>", custom_id=cls.ID_PREVIOUS_PAGE)
 	
 	@classmethod
 	def next(cls) -> ViewButton:
@@ -329,7 +329,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Next"
 		- custom_id: :attr:`ViewButton.ID_NEXT_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blue, emoji="<:right:1060419619107655771>", custom_id=cls.ID_NEXT_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji="<:right:1060419619107655771>", custom_id=cls.ID_NEXT_PAGE)
 	
 	@classmethod
 	def go_to_first_page(cls) -> ViewButton:
@@ -341,7 +341,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "First Page"
 		- custom_id: :attr:`ViewButton.ID_GO_TO_FIRST_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blue, label='First Page', custom_id=cls.ID_GO_TO_FIRST_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, label='First Page', custom_id=cls.ID_GO_TO_FIRST_PAGE)
 	
 	@classmethod
 	def go_to_last_page(cls) -> ViewButton:
@@ -353,7 +353,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Last Page"
 		- custom_id: :attr:`ViewButton.ID_GO_TO_LAST_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blue, label='Last Page', custom_id=cls.ID_GO_TO_LAST_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, label='Last Page', custom_id=cls.ID_GO_TO_LAST_PAGE)
 	
 	@classmethod
 	def go_to_page(cls) -> ViewButton:
@@ -365,7 +365,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Page Selection"
 		- custom_id: :attr:`ViewButton.ID_GO_TO_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blue, emoji='<:enter:1049061568488411226>', custom_id=cls.ID_GO_TO_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji='<:enter:1049061568488411226>', custom_id=cls.ID_GO_TO_PAGE)
 	
 	@classmethod
 	def end_session(cls) -> ViewButton:
