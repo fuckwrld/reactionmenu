@@ -51,9 +51,6 @@ from discord.ext.commands import Command
 from .abc import _BaseButton, PaginationEmojis
 from .errors import IncorrectType
 
-left = "<:left:1070126994915860572>"
-right = "<:right:1070126993338793997>"
-delete = "<:trashcan:1070106604533460992>"
 
 class _Details(NamedTuple):
 	"""Used for buttons with a `custom_id` of `ID_CALLER`"""
