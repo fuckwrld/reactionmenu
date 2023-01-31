@@ -21,9 +21,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 DEALINGS IN THE SOFTWARE.
 """
-left = "<:left:1070126994915860572>"
-right = "<:right:1070126993338793997>"
-delete = "<:trashcan:1070106604533460992>"
 
 from __future__ import annotations
 
@@ -54,6 +51,9 @@ from discord.ext.commands import Command
 from .abc import _BaseButton, PaginationEmojis
 from .errors import IncorrectType
 
+left = "<:left:1070126994915860572>"
+right = "<:right:1070126993338793997>"
+delete = "<:trashcan:1070106604533460992>"
 
 class _Details(NamedTuple):
 	"""Used for buttons with a `custom_id` of `ID_CALLER`"""
