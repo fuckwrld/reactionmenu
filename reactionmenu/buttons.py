@@ -320,7 +320,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Back"
 		- custom_id: :attr:`ViewButton.ID_PREVIOUS_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blurple, emoji=left, custom_id=cls.ID_PREVIOUS_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji="<:left:1070126994915860572>", custom_id=cls.ID_PREVIOUS_PAGE)
 	
 	@classmethod
 	def next(cls) -> ViewButton:
@@ -332,7 +332,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Next"
 		- custom_id: :attr:`ViewButton.ID_NEXT_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blurple, emoji=right, custom_id=cls.ID_NEXT_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji="<:right:1070126993338793997>", custom_id=cls.ID_NEXT_PAGE)
 	
 	@classmethod
 	def go_to_first_page(cls) -> ViewButton:
@@ -380,45 +380,10 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Close"
 		- custom_id: :attr:`ViewButton.ID_END_SESSION`
 		"""
-		return cls(style=discord.ButtonStyle.red, emoji=delete, custom_id=cls.ID_END_SESSION)
+		return cls(style=discord.ButtonStyle.red, emoji="<:trashcan:1070106604533460992>", custom_id=cls.ID_END_SESSION)
 	
 	@classmethod
 	def all(cls) -> List[ViewButton]:
-		"""|class method|
-		
-		A factory method that returns a list of all base navigation buttons. The following buttons are returned with pre-set values:
-		
-		- Button 1
-			- style: `discord.ButtonStyle.gray`
-			- label: "First Page"
-			- custom_id: :attr:`ViewButton.ID_GO_TO_FIRST_PAGE`
-		- Button 2
-			- style: `discord.ButtonStyle.gray`
-			- label: "Back"
-			- custom_id: :attr:`ViewButton.ID_PREVIOUS_PAGE`
-		- Button 3
-			- style: `discord.ButtonStyle.gray`
-			- label: "Next"
-			- custom_id: :attr:`ViewButton.ID_NEXT_PAGE`
-		- Button 4
-			- style: `discord.ButtonStyle.gray`
-			- label: "Last Page"
-			- custom_id: :attr:`ViewButton.ID_GO_TO_LAST_PAGE`
-		- Button 5
-			- style: `discord.ButtonStyle.gray`
-			- label: "Page Selection"
-			- custom_id: :attr:`ViewButton.ID_GO_TO_PAGE`
-		- Button 6
-			- style: `discord.ButtonStyle.gray`
-			- label: "Close"
-			- custom_id: :attr:`ViewButton.ID_END_SESSION`
-
-		They are returned in that order
-		
-		Returns
-		-------
-		List[:class:`ViewButton`]
-		"""
 		return [cls.back(), cls.next(), cls.go_to_page(), cls.end_session()]
 	
 	@classmethod
