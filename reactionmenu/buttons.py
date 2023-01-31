@@ -21,6 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 DEALINGS IN THE SOFTWARE.
 """
+left = "<:left:1070126994915860572>"
+right = "<:right:1070126993338793997>"
+delete = "<:trashcan:1070106604533460992>"
 
 from __future__ import annotations
 
@@ -317,7 +320,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Back"
 		- custom_id: :attr:`ViewButton.ID_PREVIOUS_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blurple, emoji="<:left:1060419618096807977>", custom_id=cls.ID_PREVIOUS_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji=left, custom_id=cls.ID_PREVIOUS_PAGE)
 	
 	@classmethod
 	def next(cls) -> ViewButton:
@@ -329,7 +332,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Next"
 		- custom_id: :attr:`ViewButton.ID_NEXT_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.blurple, emoji="<:right:1060419619107655771>", custom_id=cls.ID_NEXT_PAGE)
+		return cls(style=discord.ButtonStyle.blurple, emoji=right, custom_id=cls.ID_NEXT_PAGE)
 	
 	@classmethod
 	def go_to_first_page(cls) -> ViewButton:
@@ -377,7 +380,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Close"
 		- custom_id: :attr:`ViewButton.ID_END_SESSION`
 		"""
-		return cls(style=discord.ButtonStyle.red, emoji='<:trash:1061393433765363752>', custom_id=cls.ID_END_SESSION)
+		return cls(style=discord.ButtonStyle.red, emoji=delete, custom_id=cls.ID_END_SESSION)
 	
 	@classmethod
 	def all(cls) -> List[ViewButton]:
