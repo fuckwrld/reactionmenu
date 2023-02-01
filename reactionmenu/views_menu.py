@@ -441,7 +441,7 @@ class ViewMenu(_BaseMenu):
                 if embed.footer.text:
                     DIRECTOR_PATTERN = STYLE_PATTERN + r':? '
                     if re.search(DIRECTOR_PATTERN, embed.footer.text):
-                        embed.set_footer(text=re.sub(DIRECTOR_PATTERN, '', embed.footer.text), icon_url=embed.footer.icon_url)
+                        embed.set_footer(text="")
                 
                 return page
             
