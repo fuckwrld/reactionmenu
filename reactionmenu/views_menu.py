@@ -12,7 +12,7 @@ Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
-
+what page would you like to go to?
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -441,7 +441,7 @@ class ViewMenu(_BaseMenu):
                 if embed.footer.text:
                     DIRECTOR_PATTERN = STYLE_PATTERN + r':? '
                     if re.search(DIRECTOR_PATTERN, embed.footer.text):
-                        embed.set_footer(text="")
+                        embed.set_footer(text="‎ ")
                 
                 return page
             
@@ -1109,7 +1109,7 @@ class ViewMenu(_BaseMenu):
         
         elif button.custom_id == ViewButton.ID_GO_TO_PAGE:
             await inter.response.defer()
-            prompt: discord.Message = await self._msg.channel.send(f'{inter.user.display_name}, what page would you like to go to?') # type: ignore / `.channel` is know at this point
+            prompt: discord.Message = await self._msg.channel.send(embed=discord.Embed(description=f'{inter.user.mention}, what page would you like to go to?',color=0x9d9598)) # type: ignore / `.channel` is know at this point
             try:
                 selection_message: discord.Message = await inter.client.wait_for('message', check=lambda m: all([m.channel.id == self._msg.channel.id, m.author.id == inter.user.id]), timeout=self.timeout) # type: ignore / `.channel` is know at this point
                 page = int(selection_message.content)
