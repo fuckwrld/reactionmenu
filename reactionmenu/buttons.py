@@ -365,7 +365,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Page Selection"
 		- custom_id: :attr:`ViewButton.ID_GO_TO_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.gray, emoji='<:enter:1049061568488411226>', custom_id=cls.ID_GO_TO_PAGE)
+		return cls(style=discord.ButtonStyle.gray, emoji='<:enter:1071536453055688816>', custom_id=cls.ID_GO_TO_PAGE)
 	
 	@classmethod
 	def end_session(cls) -> ViewButton:
