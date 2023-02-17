@@ -1109,7 +1109,7 @@ class ViewMenu(_BaseMenu):
         
         elif button.custom_id == ViewButton.ID_GO_TO_PAGE:
             await inter.response.defer()
-            prompt: discord.Message = await self._msg.channel.send(embed=discord.Embed(description=f'{inter.user.mention}, what page would you like to go to?',color=0x9d9598)) # type: ignore / `.channel` is know at this point
+            prompt: discord.Message = await self._msg.channel.send(embed=discord.Embed(description=f'{inter.user.mention}, what page would you like to go to?',color=0x2f3136)) # type: ignore / `.channel` is know at this point
             try:
                 selection_message: discord.Message = await inter.client.wait_for('message', check=lambda m: all([m.channel.id == self._msg.channel.id, m.author.id == inter.user.id]), timeout=self.timeout) # type: ignore / `.channel` is know at this point
                 page = int(selection_message.content)
