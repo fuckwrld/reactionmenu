@@ -316,8 +316,9 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- style: `discord.ButtonStyle.gray`
 		- label: "Back"
 		- custom_id: :attr:`ViewButton.ID_PREVIOUS_PAGE`
+	
 		"""
-		return cls(style=discord.ButtonStyle.gray, emoji="<:left:1075929084472856617>", custom_id=cls.ID_PREVIOUS_PAGE)
+		return cls(style=discord.ButtonStyle.gray, emoji="<:left:1115104833792385075>", custom_id=cls.ID_PREVIOUS_PAGE)
 	
 	@classmethod
 	def next(cls) -> ViewButton:
@@ -329,7 +330,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Next"
 		- custom_id: :attr:`ViewButton.ID_NEXT_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.gray, emoji="<:right:1075928983423692830>", custom_id=cls.ID_NEXT_PAGE)
+		return cls(style=discord.ButtonStyle.gray, emoji="<:right:1115104835491078164>", custom_id=cls.ID_NEXT_PAGE)
 	
 	@classmethod
 	def go_to_first_page(cls) -> ViewButton:
@@ -365,7 +366,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Page Selection"
 		- custom_id: :attr:`ViewButton.ID_GO_TO_PAGE`
 		"""
-		return cls(style=discord.ButtonStyle.gray, emoji='<:filter:1075926834824364063>', custom_id=cls.ID_GO_TO_PAGE)
+		return cls(style=discord.ButtonStyle.gray, emoji='<:1up:1115104470179790909>', custom_id=cls.ID_GO_TO_PAGE)
 	
 	@classmethod
 	def end_session(cls) -> ViewButton:
@@ -377,7 +378,7 @@ class ViewButton(discord.ui.Button, _BaseButton):
 		- label: "Close"
 		- custom_id: :attr:`ViewButton.ID_END_SESSION`
 		"""
-		return cls(style=discord.ButtonStyle.red, emoji="<:trashcan:1075928336511012904>", custom_id=cls.ID_END_SESSION)
+		return cls(style=discord.ButtonStyle.red, emoji="<:trash:1115104840369066004>", custom_id=cls.ID_END_SESSION)
 	
 	@classmethod
 	def all(cls) -> List[ViewButton]:
